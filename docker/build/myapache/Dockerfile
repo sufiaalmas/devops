@@ -16,5 +16,7 @@ RUN echo "Welcome to the world of docker " > /var/www/html/index.html
 #injecting the application code inside image
 COPY sufia.html /var/www/html/info.html
 
+EXPOSE 80
+
 #BRING the apache service
 CMD ["/usr/sbin/apache2ctl", "-D", "FOREGROUND"]
